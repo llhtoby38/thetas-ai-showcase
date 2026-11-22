@@ -1,43 +1,35 @@
-# Thetas.ai — AI Revision Platform
+# thetas.ai
 
-🌐 **Live:** [thetas.ai](https://thetas.ai)
-🏢 **Parent brand:** [thetasai.com](https://thetasai.com)
+**AI knows what to teach. We tell it who it's teaching.**
 
-> Upload your curriculum. Get a personalised feed of practice questions, flashcards, and AI-generated study notes.
+[thetas.ai](https://thetas.ai) · [thetasai.com](https://thetasai.com) · [thetas.ai/developers](https://thetas.ai/developers)
 
-This repo is a public showcase. The application source is private.
+thetas.ai is a private learning feed for students and a lesson recorder for tutors, built on a per-student learning brain that records what each student has shown they can do from their own marked work and their tutor's lessons. I co-founded Thetas and build the product end to end. The source is private; this repo is a public showcase.
 
----
+> **[The whole company system (student app, tutor side, learning brain and MCP server, admin portal, Studio and internal tools) is on the ThetasAI organisation page](https://github.com/ThetasAI)**
+
+<p>
+  <img src="images/student-home-theta.webp" alt="Student Home with Theta open beside it" width="49%">
+  <img src="images/student-feed.webp" alt="The Feed: a practice question picked from a weak spot" width="49%">
+</p>
+<p>
+  <img src="images/tutor-lesson-review.webp" alt="A recorded lesson drafted into notes, waiting for the tutor's approval" width="49%">
+  <img src="images/learning-brain.webp" alt="What the learning brain knows about a student" width="49%">
+</p>
 
 ## What it does
 
-Thetas.ai is an AI-powered revision tool built for secondary school students preparing for international curricula. Students upload syllabus materials, and the platform generates adaptive practice content tuned to their weak topics.
+- **Students**: one question at a time, picked from weak spots, set work and ideas that are starting to fade; a study plan toward the exam date; and Theta, an assistant that knows their plan and progress.
+- **Tutors**: record a lesson and Thetas drafts the notes, per-student profile updates and follow-up practice. The tutor approves each part before anything reaches a student.
+- **Any AI**: Claude, ChatGPT, Gemini, Cursor and other MCP clients can read the learning brain over MCP, with tokens the student or tutor controls.
 
-## Key features
+## Built with
 
-- **Curriculum templates** — pre-built support for IB, IGCSE, and HKDSE
-- **Adaptive practice modes** — Weakness (target gaps), Revision (consolidate strengths), Explore (broaden coverage)
-- **Chapter tests with AI grading** — multi-factor scoring on free-response answers, not just multiple choice
-- **AI study notes & flashcards** — generated from uploaded materials, editable by the student
-- **Credit-based pricing** — Free tier (50 credits) and Pro ($9.99 / 2,000 credits)
-- **Currently in trial** with Hong Kong secondary IB Math students
-
-## Architecture (high level)
-
-| Layer | Stack |
-|-------|-------|
-| Frontend | React, TypeScript |
-| Backend | Spring Boot microservices |
-| AI orchestration | Spring AI (provider-agnostic LLM routing) |
-| Data | PostgreSQL, MongoDB, Redis |
-| Infrastructure | AWS, Docker, CI/CD |
-
-Everything from domain acquisition to production deployment was built solo.
+- Next.js 15, React 19, TypeScript, Tailwind
+- Python, FastAPI, PostgreSQL with pgvector
+- Gemini and Claude
+- MCP
 
 ## Status
 
-Live and functional, in active trial with real users. Active development.
-
----
-
-Built and operated by [Toby Lee](https://github.com/llhtoby38).
+Closed beta, IB Maths, Hong Kong. Screenshots use demo accounts only.
